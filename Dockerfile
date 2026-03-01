@@ -5,6 +5,5 @@ RUN CGO_ENABLED=0 go build -o <binary-name> .
 
 #Final Stage
 FROM scratch
-COPY templates/
-COPY --from=0 /go/myapp
+COPY --from=0 /go/myapp /templates
 CMD ["/myapp"]
