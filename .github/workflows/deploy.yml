@@ -28,7 +28,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v2
 
       - name: build, tag, and push to ecr
-        run:
+        run: |
           docker build -t my-app:latest .
           docker tag my-app:latest 718307299334.dkr.ecr.us-east-1.amazonaws.com/assignment2
           docker push 718307299334.dkr.ecr.us-east-1.amazonaws.com/assignment2
