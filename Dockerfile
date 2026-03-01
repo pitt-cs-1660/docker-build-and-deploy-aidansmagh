@@ -2,7 +2,7 @@
 FROM golang:1.23 AS builder
 COPY go.mod .
 COPY main.go .
-COPY templates/
+COPY /templates
 RUN CGO_ENABLED=0 go build -o myapp .
 
 #Final Stage
